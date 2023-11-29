@@ -1,0 +1,100 @@
+<!-- res/layout/order_detail.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffe8c6"
+    android:orientation="vertical"
+    android:padding="0dp"
+    tools:context=".OrderDetailActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/left_chevron"
+        android:drawablePadding="8dp"
+        android:paddingStart="15dp"
+
+        android:paddingTop="10dp"
+        android:text="Chi tiết đơn hàng"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#000" />
+
+
+    <!-- RecyclerView để hiển thị danh sách sản phẩm -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/view"
+        android:id="@+id/orderRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_above="@+id/viewken"
+        android:layout_marginTop="16dp" />
+    <View
+        android:id="@+id/viewken"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_above="@+id/navigation"
+        />
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:weightSum="4"
+        android:paddingBottom="15dp"
+        android:paddingTop="5dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnhome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/home"
+            app:backgroundTint="@null" />
+
+
+        <Button
+            android:id="@+id/btnlove"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/love"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btncart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cart"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnuser"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+</RelativeLayout>
